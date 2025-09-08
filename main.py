@@ -5,7 +5,7 @@ from handlers import handle_message
 import os
 app = FastAPI()
 
-TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN") or "8376460871:AAHbQ3KzlGJtB0jBDA5m2iMOi4cD1cYEFjY"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN") or "YOUR_TOKEN"
 BASE_URL = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}"
 
 @app.get("/")
@@ -30,4 +30,5 @@ def send_message(chat_id: int, text: str):
     url = f"{BASE_URL}/sendMessage"
     payload = {"chat_id": chat_id, "text": text}
     requests.post(url, json=payload)
+
 
