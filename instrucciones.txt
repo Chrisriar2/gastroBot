@@ -1,0 +1,6 @@
+uvicorn main:app --reload --port 8000
+
+ngrok port 80
+
+curl "https://api.telegram.org/bot8376460871:AAHbQ3KzlGJtB0jBDA5m2iMOi4cD1cYEFjY/setWebhook?url=https://bd8a9e37e838.ngrok-free.app/webhook"
+
